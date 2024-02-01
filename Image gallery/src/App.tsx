@@ -27,10 +27,13 @@ export default function App() {
     );
   }
   return (
-    <div className=" ">
+    <div className="">
       <Header />
-    
-      <form className="p-4 flex  justify-center bg-gray-500 m-3" action="">
+
+      <form
+        className="p-4 flex  justify-center bg-gray-500 mt-3 mb-3"
+        action=""
+      >
         <div className="  w-1/2 p-2 flex gap-2">
           <input
             className="p-2 rounded w-full"
@@ -48,7 +51,6 @@ export default function App() {
         dataLength={images.length}
         next={() => {
           setPage((prevPage) => prevPage + 1);
-          useFetchData();
         }}
         hasMore={true}
         loader={<h4>Loading...</h4>}

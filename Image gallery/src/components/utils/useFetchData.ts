@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 const useFetchData = (url: string) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
-  const [images, setImages] = useState([]);
+  const [isError, setIsError] = useState<boolean>(false);
+  const [images, setImages] = useState<string[]>([]);
 
   useEffect(() => {
     console.log(url);
@@ -11,7 +11,7 @@ const useFetchData = (url: string) => {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        setImages((prevImages) => [...prevImages, ...data]);
+        setImages((images) => [...images, ...data]);
       } catch (err) {
         setIsError(true);
         console.log(err);
