@@ -6,7 +6,6 @@ const useFetchData = (url: string) => {
   const [images, setImages] = useState<string[]>([]);
 
   useEffect(() => {
-    console.log(url);
     const getData = async () => {
       try {
         const response = await fetch(url);
