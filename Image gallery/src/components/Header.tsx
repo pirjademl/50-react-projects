@@ -17,19 +17,15 @@ export default function Header() {
             using
           </p>
           <div className="text-2xl text-red-600">
-          <Typewriter 
-            words={[
-              "react",
-              "tailwind",
-              "unsplash",
-            ]}
-            cursorColor="red"
-            cursor={true}
-            loop={true}
-          />
+            <Typewriter
+              words={["react", "tailwind", "unsplash"]}
+              cursorColor="red"
+              cursor={true}
+              loop={true}
+            />
           </div>
         </ul>
-        <ul className="flex gap-2">
+        <ul className="hidden lg:flex overflow-hidden   gap-2">
           <a
             className="bg-[#207448] text-sm p-2 text-white rounded-md flex gap-2 items-center"
             href="https://github.com/pirjademl"
